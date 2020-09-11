@@ -16,7 +16,7 @@ The configuration is divided into 4 sections: General Buttons Advanced Styling A
 
 The general section has the most important settings including banner content.
 
-## Props
+## Properties
 
 | Prop | Type | Default value | Description |
 | ---- | :--: | ------------- | ----------- |
