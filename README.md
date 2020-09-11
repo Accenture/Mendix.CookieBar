@@ -15,6 +15,9 @@ To use this widget simply place it on your layout and configure it correctly.
 The configuration is divided into 4 sections: General Buttons Advanced Styling Advanced Settings
 
 The general section has the most important settings including banner content.
+Buttons section allows to manage content of "Accept" and "Decline" buttons.
+Advanced styling section allows to disable default styling and/or apply your own classes to contents of the bar.
+Advanced settings contain number of useful customization options.
 
 ## Properties
 
