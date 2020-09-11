@@ -21,8 +21,7 @@ The general section has the most important settings including banner content.
 | Prop | Type | Default value | Description |
 | ---- | :--: | ------------- | ----------- |
 | Message | expression | | Required message you want to appear on cookie consent request. | 
-| Location | string, "top", "bottom" or "none" | "bottom" | Required. Syntactic sugar to easily enable you to place the bar at the top or the bottom of the
-browser window. Use "none" to disable. | 
+| Location | string, "top", "bottom" or "none" | "bottom" | Required. Syntactic sugar to easily enable you to place the bar at the top or the bottom of the browser window. Use "none" to disable. | 
 | Overlay | boolean | No | Required. Whether to show a page obscuring overlay or not. | 
 | Use Cookies Policy Page | boolean | false | Required. Select if you want to add link to your policy page. | 
 | Policy button action | action | Do nothing | Action Link to your cookies policy info page e.g. "p/cookies" |
