@@ -35,7 +35,7 @@
             </property>
             <property key="linkText" type="string" defaultValue="See more" required="false">
                 <caption>Policy button text</caption>
-                <description>Text to appear o a link to policy page</description>
+                <description>Text to appear to a link to policy page</description>
             </property>
         </propertyGroup>
         <propertyGroup caption="Buttons">
