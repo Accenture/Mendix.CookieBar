@@ -56,7 +56,7 @@ export default class CookieBar extends Component {
                     <button
                         className={this.props.policyClasses}
                         style={this.hideConditionally()}
-                        onClick={this.props.link.execute}
+                        onClick={this.props.link !== undefined ? this.props.link.execute : undefined}
                     >
                         {this.props.linkText}
                     </button>
