@@ -20,9 +20,9 @@ The general section has the most important settings including banner content.
 
 | Prop | Type | Default value | Description |
 | ---- | :--: | ------------- | ----------- |
-| Message | expression | | Required message you want to appear on cookie consent request. This message can be in HTML format or as a plain text. | 
+| Message | expression | | Required. Message you want to appear on cookie consent request. This message can be in HTML format or as a plain text. | 
 | Location | string, "top", "bottom" or "none" | "bottom" | Required. Syntactic sugar to easily enable you to place the bar at the top or the bottom of the browser window. Use "none" to disable. | 
-| Overlay | boolean | No | Required. Whether to show a page obscuring overlay or not. | 
+| Overlay | boolean | false | Required. Whether to show a page obscuring overlay or not. | 
 | Use Cookies Policy Page | boolean | false | Required. Select if you want to add link to your policy page. | 
 | Policy button action | action | Do nothing | Action Link to your cookies policy info page e.g. "p/cookies" |
 | Policy button text | string | See more | Text to appear to a link to policy page | 
@@ -42,13 +42,13 @@ The general section has the most important settings including banner content.
 | Policy button classes | string | | CSS classes to apply to the Policy button classes |
 | Disable styles | boolean | false | If enabled the component will have no default style |
 | Hide on accept | boolean | true | Required. If disabled the component will not hide it self after the accept button has been clicked. You will need to hide yourself |
-| Accept on scroll | boolean | No | Defines whether "accept" should be fired after the user scrolls a certain distance (see Accept on scroll percentage) |
+| Accept on scroll | boolean | false | Defines whether "accept" should be fired after the user scrolls a certain distance (see Accept on scroll percentage) |
 | Accept on scroll percentage | decimal | 25 | Required. Percentage of the page height the user has to scroll to trigger the accept function if acceptOnScroll is enabled|
 | Cookie name | string | | Name of the cookie used to track whether the user has agreed | 
 | Cookie value | string | | Value to be saved under the cookieName | 
 | Decline cookie value | string | | Value to be saved under the cookieName when declined |
 | Set decline cookie | boolean | true | Required. Whether to set a cookie when the user clicks "decline" | 
-| Debug mode | boolean | No | Required. Bar will be drawn regardless of cookie for debugging purposes | 
+| Debug mode | boolean | false | Required. Bar will be drawn regardless of cookie for debugging purposes | 
 | Expires | integer | 365 | Required. Number of days before the cookie expires |
 | Same site | string | | Cookies sameSite attribute value |
 | Cookie security | boolean | true | Cookie security level. Defaults to true unless running on http |
