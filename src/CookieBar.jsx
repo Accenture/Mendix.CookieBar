@@ -1,14 +1,10 @@
-import CookieConsent, { Cookies } from "react-cookie-consent";
+import CookieConsent from "react-cookie-consent";
 import Parser from "html-react-parser";
 import { Component, createElement } from "react";
 
 import "./ui/CookieBar.css";
 
 export default class CookieBar extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     fixEmptyString(value) {
         if (value === "") return undefined;
         else return value;
@@ -58,7 +54,7 @@ export default class CookieBar extends Component {
                 >
                     {Parser(this.props.caption.value)}
                     <button
-                        class={this.props.policyClasses}
+                        className={this.props.policyClasses}
                         style={this.hideConditionally()}
                         onClick={this.props.link.execute}
                     >
