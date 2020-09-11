@@ -9,7 +9,7 @@
         <propertyGroup caption="General">
             <property key="caption" type="expression" required="true">
                 <caption>Message</caption>
-                <description>Message you want to appear on cookie consent request.</description>
+                <description>Message you want to appear on cookie consent request. This message can be written in HTML format or as a plain text.</description>
                 <returnType type="String" />
             </property>
             <property key="location" type="enumeration" defaultValue="bottom">
