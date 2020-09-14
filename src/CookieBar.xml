@@ -8,7 +8,7 @@
     <properties>
         <propertyGroup caption="General">
             <property key="caption" type="expression" required="true">
-                <caption>Message</caption>
+                <caption>Message expression</caption>
                 <description>Message you want to appear on cookie consent request. This message can be written in HTML format or as a plain text.</description>
                 <returnType type="String" />
             </property>
@@ -31,7 +31,7 @@
             </property>
             <property key="link" type="action">
                 <caption>Policy button action</caption>
-                <description>Action Link to your cookies policy info page e.g. "p/cookies"</description>
+                <description>Action button which redirects to cookies policy.</description>
             </property>
             <property key="linkText" type="string" defaultValue="See more" required="false">
                 <caption>Policy button text</caption>
@@ -135,13 +135,18 @@
                 <caption>Expires</caption>
                 <description>Number of days before the cookie expires.</description>
             </property>
-            <property key="sameSite" type="string" required="false">
+            <property key="sameSite" type="enumeration" defaultValue="lax">
                 <caption>Same site</caption>
-                <description>Cookies sameSite attribute value</description>
+                <description>Cookies sameSite attribute value. Use None only with cookies security set to true.</description>
+                <enumerationValues>
+                    <enumerationValue key="strict">Strict</enumerationValue>
+                    <enumerationValue key="lax">Lax</enumerationValue>
+                    <enumerationValue key="none">None</enumerationValue>
+                </enumerationValues>
             </property>
-            <property key="cookieSecurity" type="boolean" defaultValue="true" required="true">
+            <property key="cookieSecurity" type="boolean" defaultValue="false" required="true">
                 <caption>Cookie security</caption>
-                <description>Cookie security level. Defaults to true unless running on http.</description>
+                <description>Cookie security level. Use true only when running on https.</description>
             </property>
         </propertyGroup>
     </properties>

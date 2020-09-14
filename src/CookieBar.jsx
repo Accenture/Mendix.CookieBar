@@ -5,6 +5,22 @@ import { Component, createElement } from "react";
 import "./ui/CookieBar.css";
 
 export default class CookieBar extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            message: ""
+        };
+    }
+
+    componentDidMount() {
+        const interval = setInterval(() => {
+            if (this.props.caption.status === "available") {
+                this.setState({ message: this.props.caption.value });
+                clearInterval(interval);
+            }
+        }, 50);
+    }
+
     fixEmptyString(value) {
         if (value === "") return undefined;
         else return value;
@@ -27,8 +43,6 @@ export default class CookieBar extends Component {
                     cookieValue={this.fixEmptyString(this.props.cookieValue)}
                     declineCookieValue={this.fixEmptyString(this.props.declineCookieValue)}
                     setDeclineCookie={this.props.setDeclineCookie}
-                    onAccept={this.props.onAccept}
-                    onDecline={this.props.onDecline}
                     debug={this.props.debug}
                     expires={this.props.expires}
                     overlay={this.props.overlay}
@@ -40,19 +54,13 @@ export default class CookieBar extends Component {
                     declineButtonId={this.fixEmptyString(this.props.declineButtonId)}
                     contentClasses={this.fixEmptyString(this.props.contentClasses)}
                     overlayClasses={this.fixEmptyString(this.props.overlayClasses)}
-                    // style={this.props.style}
-                    // buttonStyle={this.props.buttonStyle}
-                    // declineButtonStyle={this.props.declineButtonStyle}
-                    // contentStyle={this.props.contentStyle}
-                    // overlayStyle={this.props.overlayStyle}
                     disableButtonStyles={this.props.disableButtonStyles}
                     enableDeclineButton={this.props.enableDeclineButton}
                     flipButtons={this.props.flipButtons}
-                    // ButtonComponent={this.props.ButtonComponent}
-                    sameSite={this.fixEmptyString(this.props.sameSite)}
+                    sameSite={this.props.sameSite}
                     cookieSecurity={this.props.cookieSecurity}
                 >
-                    {Parser(this.props.caption.value)}
+                    {Parser(this.state.message)}
                     <button
                         className={this.props.policyClasses}
                         style={this.hideConditionally()}
