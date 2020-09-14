@@ -54,4 +54,4 @@ Advanced settings contain number of useful customization options.
 | Debug mode | boolean | false | Required. Bar will be drawn regardless of cookie for debugging purposes | 
 | Expires | integer | 365 | Required. Number of days before the cookie expires |
 | Same site | enumeration, "strict", "lax" or "none" | "lax" | Cookies sameSite attribute value. Use "none" only with Cookie security set to true. |
-| Cookie security | boolean | true | Cookie security level. Use true only when running on https. |
+| Cookie security | boolean | true | Cookie security attribute. Use true only when running on https. |
