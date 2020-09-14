@@ -24,7 +24,7 @@ Advanced settings contain number of useful customization options.
 | Prop | Type | Default value | Description |
 | ---- | :--: | ------------- | ----------- |
 | Message | expression | | Required. Message you want to appear on cookie consent request. This message can be in HTML format or as a plain text. | 
-| Location | string, "top", "bottom" or "none" | "bottom" | Required. Syntactic sugar to easily enable you to place the bar at the top or the bottom of the browser window. Use "none" to disable. | 
+| Location | enumeration, "top", "bottom" or "none" | "bottom" | Required. Syntactic sugar to easily enable you to place the bar at the top or the bottom of the browser window. Use "none" to disable. | 
 | Overlay | boolean | false | Required. Whether to show a page obscuring overlay or not. | 
 | Use Cookies Policy Page | boolean | false | Required. Select if you want to add link to your policy page. | 
 | Policy button action | action | Do nothing | Action Link to your cookies policy info page e.g. "p/cookies" |
@@ -53,5 +53,5 @@ Advanced settings contain number of useful customization options.
 | Set decline cookie | boolean | true | Required. Whether to set a cookie when the user clicks "decline" | 
 | Debug mode | boolean | false | Required. Bar will be drawn regardless of cookie for debugging purposes | 
 | Expires | integer | 365 | Required. Number of days before the cookie expires |
-| Same site | string | | Cookies sameSite attribute value |
-| Cookie security | boolean | true | Cookie security level. Defaults to true unless running on http |
+| Same site | enumeration, "strict", "lax" or "none" | "lax" | Cookies sameSite attribute value. Use "none" only with Cookie security set to true. |
+| Cookie security | boolean | true | Cookie security level. Use true only when running on https. |
