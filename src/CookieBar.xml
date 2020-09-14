@@ -146,7 +146,7 @@
             </property>
             <property key="cookieSecurity" type="boolean" defaultValue="false" required="true">
                 <caption>Cookie security</caption>
-                <description>Cookie security level. Use true only when running on https.</description>
+                <description>Cookie security attribute. Use true only when running on https.</description>
             </property>
         </propertyGroup>
     </properties>
