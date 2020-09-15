@@ -35,7 +35,7 @@
             </property>
             <property key="policyLinkText" type="string" defaultValue="See more" required="false">
                 <caption>Policy button text</caption>
-                <description>Text to appear to a link to policy page.</description>
+                <description>Text to appear on a policy redirection button.</description>
             </property>
         </propertyGroup>
         <propertyGroup caption="Buttons">
@@ -75,7 +75,7 @@
         <propertyGroup caption="Advanced settings">
             <property key="hideOnAccept" type="boolean" defaultValue="true" required="true">
                 <caption>Hide on accept</caption>
-                <description>If disabled the component will not hide it self after the accept button has been clicked. You will need to hide yourself.</description>
+                <description>If disabled the component will not hide it self after the accept button has been clicked. You will need to hide it yourself.</description>
             </property>
             <property key="acceptOnScroll" type="boolean" defaultValue="false" required="true">
                 <caption>Accept on scroll</caption>
