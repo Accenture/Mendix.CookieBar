@@ -14,11 +14,10 @@
             </property>
             <property key="location" type="enumeration" defaultValue="bottom">
                 <caption>Location</caption>
-                <description>Location of cookie consent bar. Select none to disable.</description>
+                <description>Location of cookie consent bar.</description>
                 <enumerationValues>
                     <enumerationValue key="bottom">Bottom</enumerationValue>
                     <enumerationValue key="top">Top</enumerationValue>
-                    <enumerationValue key="none">None</enumerationValue>
                 </enumerationValues>
             </property>
             <property key="overlay" type="boolean" defaultValue="false" required="true">
