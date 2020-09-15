@@ -25,57 +25,56 @@ export default class CookieBar extends Component {
         else return value;
     }
 
-    hideConditionally() {
-        return this.props.useCookiesPolicy ? {} : { display: "none" };
-    }
-
     render() {
         return (
-            <div id="cookiebar-container" style={this.props.style} className={"cookiebar-widget " + this.props.class}>
-                <CookieConsent
-                    //General
-                    location={this.fixEmptyString(this.props.location)}
-                    overlay={this.props.overlay}
-                    //Buttons
-                    buttonId={this.fixEmptyString(this.props.buttonId)}
-                    buttonText={this.fixEmptyString(this.props.buttonText)}
-                    onAccept={this.props.onAccept !== undefined ? this.props.onAccept.execute : undefined}
-                    declineButtonId={this.fixEmptyString(this.props.declineButtonId)}
-                    declineButtonText={this.fixEmptyString(this.props.declineButtonText)}
-                    onDecline={this.props.onDecline !== undefined ? this.props.onDecline.execute : undefined}
-                    enableDeclineButton={this.props.enableDeclineButton}
-                    flipButtons={this.props.flipButtons}
-                    //Classes
-                    buttonClasses="btn btn-primary btn-accept"
-                    declineButtonClasses="btn btn-default btn-decline"
-                    buttonWrapperClasses="button-wrapper"
-                    contentClasses="cookiebar-content"
-                    overlayClasses="cookiebar-overlay"
-                    disableStyles={true}
-                    disableButtonStyles={true}
-                    //Settings
-                    hideOnAccept={this.props.hideOnAccept}
-                    acceptOnScroll={this.props.acceptOnScroll}
-                    acceptOnScrollPercentage={this.props.acceptOnScrollPercentage}
-                    cookieName={this.fixEmptyString(this.props.cookieName)}
-                    cookieValue={this.fixEmptyString(this.props.cookieValue)}
-                    declineCookieValue={this.fixEmptyString(this.props.declineCookieValue)}
-                    setDeclineCookie={this.props.setDeclineCookie}
-                    debug={this.props.debug}
-                    expires={this.props.expires}
-                    sameSite={this.props.sameSite}
-                    cookieSecurity={this.props.cookieSecurity}
-                >
-                    {Parser(this.state.message)}
+            <CookieConsent
+                //General
+                location={this.fixEmptyString(this.props.location)}
+                overlay={this.props.overlay}
+                //Buttons
+                buttonId={this.fixEmptyString(this.props.buttonId)}
+                buttonText={this.fixEmptyString(this.props.buttonText)}
+                onAccept={this.props.onAccept !== undefined ? this.props.onAccept.execute : undefined}
+                declineButtonId={this.fixEmptyString(this.props.declineButtonId)}
+                declineButtonText={this.fixEmptyString(this.props.declineButtonText)}
+                onDecline={this.props.onDecline !== undefined ? this.props.onDecline.execute : undefined}
+                enableDeclineButton={this.props.enableDeclineButton}
+                flipButtons={this.props.flipButtons}
+                //Classes
+                style={this.props.style}
+                containerClasses={"cookiebar-widget " + this.props.class}
+                buttonClasses="btn btn-primary btn-accept"
+                declineButtonClasses="btn btn-default btn-decline"
+                buttonWrapperClasses="btn-wrapper"
+                contentClasses="cookiebar-content"
+                overlayClasses="cookiebar-overlay"
+                disableStyles={true}
+                disableButtonStyles={true}
+                //Settings
+                hideOnAccept={this.props.hideOnAccept}
+                acceptOnScroll={this.props.acceptOnScroll}
+                acceptOnScrollPercentage={this.props.acceptOnScrollPercentage}
+                cookieName={this.fixEmptyString(this.props.cookieName)}
+                cookieValue={this.fixEmptyString(this.props.cookieValue)}
+                declineCookieValue={this.fixEmptyString(this.props.declineCookieValue)}
+                setDeclineCookie={this.props.setDeclineCookie}
+                debug={this.props.debug}
+                expires={this.props.expires}
+                sameSite={this.props.sameSite}
+                cookieSecurity={this.props.cookieSecurity}
+            >
+                {Parser(this.state.message)}
+                {this.props.useCookiesPolicy ? (
                     <button
-                        className="btn btn-link btn-policy"
-                        style={this.hideConditionally()}
+                        className="btn-link mx-link btn-policy"
                         onClick={this.props.onPolicyClick !== undefined ? this.props.onPolicyClick.execute : undefined}
                     >
                         {this.props.policyLinkText}
                     </button>
-                </CookieConsent>
-            </div>
+                ) : (
+                    ""
+                )}
+            </CookieConsent>
         );
     }
 }
