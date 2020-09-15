@@ -3,7 +3,7 @@
     xmlns="http://www.mendix.com/widget/1.0/"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
     <name>Cookie Bar</name>
-    <description>Cookies support widget by Objectivity </description>
+    <description>Cookies support widget by Objectivity.</description>
     <icon/>
     <properties>
         <propertyGroup caption="General">
@@ -29,87 +29,61 @@
                 <caption>Use cookies policy page</caption>
                 <description>Select if you want to add link to your policy page.</description>
             </property>
-            <property key="link" type="action">
+            <property key="onPolicyClick" type="action">
                 <caption>Policy button action</caption>
-                <description>Action button which redirects to cookies policy.</description>
+                <description>Action  which redirects to cookies policy.</description>
             </property>
-            <property key="linkText" type="string" defaultValue="See more" required="false">
+            <property key="policyLinkText" type="string" defaultValue="See more" required="false">
                 <caption>Policy button text</caption>
-                <description>Text to appear to a link to policy page</description>
+                <description>Text to appear to a link to policy page.</description>
             </property>
         </propertyGroup>
         <propertyGroup caption="Buttons">
             <property key="buttonText" type="string" defaultValue="Accept" required="false">
                 <caption>Accept button text</caption>
-                <description>Text to appear on the accept button</description>
+                <description>Text to appear on the accept button.</description>
             </property>
             <property key="buttonId" type="string" required="false">
                 <caption>Accept button Id</caption>
-                <description>Id to apply to the accept button</description>
+                <description>Id to apply to the accept button.</description>
+            </property>
+            <property key="onAccept" type="action">
+                <caption>On Accept</caption>
+                <description>Action to be triggered on accept button click.</description>
             </property>
             <property key="enableDeclineButton" type="boolean" defaultValue="false" required="true">
                 <caption>Enable decline button</caption>
-                <description>If enabled the decline button will be rendered</description>
+                <description>If enabled the decline button will be rendered.</description>
             </property>
             <property key="declineButtonText" type="string" defaultValue="Decline" required="false">
                 <caption>Decline button text</caption>
-                <description>Text to appear on the decline button</description>
+                <description>Text to appear on the decline button.</description>
             </property>
             <property key="declineButtonId" type="string" required="false">
                 <caption>Decline button Id</caption>
-                <description>Id to apply to the decline button</description>
+                <description>Id to apply to the decline button.</description>
+            </property>
+            <property key="onDecline" type="action">
+                <caption>On Decline</caption>
+                <description>Action to be triggered on decline button click.</description>
             </property>
             <property key="flipButtons" type="boolean" defaultValue="false" required="true">
                 <caption>Flip buttons</caption>
-                <description>If enabled the accept and decline buttons will be flipped</description>
-            </property>
-        </propertyGroup>
-        <propertyGroup caption="Advanced styling">
-            <property key="containerClasses" type="string" required="false">
-                <caption>Container classes</caption>
-                <description>CSS classes to apply to the surrounding container</description>
-            </property>
-            <property key="buttonClasses" type="string" required="false">
-                <caption>Accept button classes</caption>
-                <description>CSS classes to apply to the accept button</description>
-            </property>
-            <property key="buttonWrapperClasses" type="string" required="false">
-                <caption>Button wrapper classes</caption>
-                <description>CSS classes to apply to the div wrapping the buttons</description>
-            </property>
-            <property key="declineButtonClasses" type="string" required="false">
-                <caption>Decline button classes</caption>
-                <description>CSS classes to apply to the decline button</description>
-            </property>
-            <property key="contentClasses" type="string" required="false">
-                <caption>Content classes</caption>
-                <description>CSS classes to apply to the content</description>
-            </property>
-            <property key="overlayClasses" type="string" required="false">
-                <caption>Overlay classes</caption>
-                <description>CSS classes to apply to the surrounding overlay</description>
-            </property>
-            <property key="policyClasses" type="string" defaultValue="btn-link" required="false">
-                <caption>Policy button classes</caption>
-                <description>CSS classes to apply to the Policy button classes</description>
+                <description>If enabled the accept and decline buttons will be flipped.</description>
             </property>
         </propertyGroup>
         <propertyGroup caption="Advanced settings">
-            <property key="disableStyles" type="boolean" defaultValue="false" required="true">
-                <caption>Disable styles</caption>
-                <description>If enabled the component will have no default style.</description>
-            </property>
             <property key="hideOnAccept" type="boolean" defaultValue="true" required="true">
                 <caption>Hide on accept</caption>
                 <description>If disabled the component will not hide it self after the accept button has been clicked. You will need to hide yourself.</description>
             </property>
             <property key="acceptOnScroll" type="boolean" defaultValue="false" required="true">
                 <caption>Accept on scroll</caption>
-                <description>Defines whether "accept" should be fired after the user scrolls a certain distance (see Accept on scroll percentage)</description>
+                <description>Defines whether "accept" should be fired after the user scrolls a certain distance (see Accept on scroll percentage).</description>
             </property>
             <property key="acceptOnScrollPercentage" type="decimal" defaultValue="25" required="true">
                 <caption>Accept on scroll percentage</caption>
-                <description>Percentage of the page height the user has to scroll to trigger the accept function if acceptOnScroll is enabled</description>
+                <description>Percentage of the page height the user has to scroll to trigger the accept function if acceptOnScroll is enabled.</description>
             </property>
             <property key="cookieName" type="string" required="false">
                 <caption>Cookie name</caption>

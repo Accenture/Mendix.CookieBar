@@ -1,7 +1,6 @@
 import CookieConsent from "react-cookie-consent";
 import Parser from "html-react-parser";
 import { Component, createElement } from "react";
-
 import "./ui/CookieBar.css";
 
 export default class CookieBar extends Component {
@@ -32,41 +31,48 @@ export default class CookieBar extends Component {
 
     render() {
         return (
-            <div id="cookiebar-container" style={this.props.style} className={this.props.class}>
+            <div id="cookiebar-container" style={this.props.style} className={"cookiebar-widget " + this.props.class}>
                 <CookieConsent
+                    //General
                     location={this.fixEmptyString(this.props.location)}
-                    disableStyles={this.props.disableStyles}
-                    hideOnAccept={this.props.hideOnAccept}
+                    overlay={this.props.overlay}
+                    //Buttons
+                    buttonId={this.fixEmptyString(this.props.buttonId)}
                     buttonText={this.fixEmptyString(this.props.buttonText)}
+                    onAccept={this.props.onAccept !== undefined ? this.props.onAccept.execute : undefined}
+                    declineButtonId={this.fixEmptyString(this.props.declineButtonId)}
                     declineButtonText={this.fixEmptyString(this.props.declineButtonText)}
+                    onDecline={this.props.onDecline !== undefined ? this.props.onDecline.execute : undefined}
+                    enableDeclineButton={this.props.enableDeclineButton}
+                    flipButtons={this.props.flipButtons}
+                    //Classes
+                    buttonClasses="btn btn-primary btn-accept"
+                    declineButtonClasses="btn btn-default btn-decline"
+                    buttonWrapperClasses="button-wrapper"
+                    contentClasses="cookiebar-content"
+                    overlayClasses="cookiebar-overlay"
+                    disableStyles={true}
+                    disableButtonStyles={true}
+                    //Settings
+                    hideOnAccept={this.props.hideOnAccept}
+                    acceptOnScroll={this.props.acceptOnScroll}
+                    acceptOnScrollPercentage={this.props.acceptOnScrollPercentage}
                     cookieName={this.fixEmptyString(this.props.cookieName)}
                     cookieValue={this.fixEmptyString(this.props.cookieValue)}
                     declineCookieValue={this.fixEmptyString(this.props.declineCookieValue)}
                     setDeclineCookie={this.props.setDeclineCookie}
                     debug={this.props.debug}
                     expires={this.props.expires}
-                    overlay={this.props.overlay}
-                    containerClasses={this.fixEmptyString(this.props.containerClasses)}
-                    buttonClasses={this.fixEmptyString(this.props.buttonClasses)}
-                    buttonWrapperClasses={this.fixEmptyString(this.props.buttonWrapperClasses)}
-                    declineButtonClasses={this.fixEmptyString(this.props.declineButtonClasses)}
-                    buttonId={this.fixEmptyString(this.props.buttonId)}
-                    declineButtonId={this.fixEmptyString(this.props.declineButtonId)}
-                    contentClasses={this.fixEmptyString(this.props.contentClasses)}
-                    overlayClasses={this.fixEmptyString(this.props.overlayClasses)}
-                    disableButtonStyles={this.props.disableButtonStyles}
-                    enableDeclineButton={this.props.enableDeclineButton}
-                    flipButtons={this.props.flipButtons}
                     sameSite={this.props.sameSite}
                     cookieSecurity={this.props.cookieSecurity}
                 >
                     {Parser(this.state.message)}
                     <button
-                        className={this.props.policyClasses}
+                        className="btn btn-link btn-policy"
                         style={this.hideConditionally()}
-                        onClick={this.props.link !== undefined ? this.props.link.execute : undefined}
+                        onClick={this.props.onPolicyClick !== undefined ? this.props.onPolicyClick.execute : undefined}
                     >
-                        {this.props.linkText}
+                        {this.props.policyLinkText}
                     </button>
                 </CookieConsent>
             </div>

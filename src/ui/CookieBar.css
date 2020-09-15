@@ -1,6 +1,32 @@
 /*
 Place your custom CSS here
 */
-.widget-hello-world {
+.cookiebar-widget {
+    align-items: baseline;
+    background: white;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    left: 0px;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    bottom: 0px;
+    box-shadow: 0 -15px 15px 0 rgba(51, 51, 51, 0.25);
+}
 
+.cookiebar-widget .cookiebar-content {
+    flex: 1 0 300px;
+    margin: 15px;
+}
+
+.cookiebar-widget .cookiebar-overlay {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.3);
 }
