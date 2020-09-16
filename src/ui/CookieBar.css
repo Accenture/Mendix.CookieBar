@@ -24,7 +24,7 @@ Place your custom CSS here
     padding: 15px;
 }
 
-.cookiebar-widget .cookiebar-overlay {
+.cookiebar-overlay {
     position: fixed;
     left: 0px;
     top: 0px;
