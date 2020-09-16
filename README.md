@@ -31,11 +31,11 @@ Advanced settings contain number of useful customization options.
 | Policy button text | string | See more | Text to appear on a policy redirection button. | 
 | Accept button text | string | Accept | Text to appear on the accept button. | 
 | Accept button Id | string | | Id to apply to the accept button. | 
-| On Accept | action | | Action to be triggered on accept button click. |
+| On Accept | action | | Additional action to be triggered on accept button click. |
 | Enable decline button | boolean | false | If enabled the decline button will be rendered. |
 | Decline button text | string | Decline | Text to appear on the decline button. |
 | Decline button Id | string | | Id to apply to the decline button. |
-| On Decline | action | | Action to be triggered on decline button click. |
+| On Decline | action | | Additional action to be triggered on decline button click. |
 | Flip buttons | boolean | false | Required. If enabled the accept and decline buttons will be flipped. |
 | Hide on accept | boolean | true | Required. If disabled the component will not hide it self after the accept button has been clicked. You will need to hide it yourself. |
 | Accept on scroll | boolean | false | Defines whether "accept" should be fired after the user scrolls a certain distance (see Accept on scroll percentage). |
