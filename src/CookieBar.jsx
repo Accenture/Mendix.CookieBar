@@ -38,7 +38,12 @@ export default class CookieBar extends Component {
 
     render() {
         return (
-            <div id="cookiebar-id" className={"cookiebar " + this.props.class} style={this.props.style}>
+            <div
+                id="cookiebar"
+                className={"cookiebar " + this.props.class}
+                style={this.props.style}
+                tabIndex={this.props.tabIndex}
+            >
                 <CookieConsent
                     //General
                     location={this.props.location}
