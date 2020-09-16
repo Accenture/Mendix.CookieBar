@@ -4,24 +4,45 @@ Place your custom CSS here
 .cookiebar-widget {
     position: fixed;
     left: 0px;
-    z-index: 999;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: baseline;
+    z-index: 1000;
     width: 100%;
     background: #ffffff;
     color: #222222;
-    box-shadow: 0 -10px 15px 0 rgba(51, 51, 51, 0.15);
+    box-shadow: 0 -10px 30px 0 rgba(51, 51, 51, 0.15);
 }
 
-.cookiebar-widget .btn-wrapper > button {
-    margin: 5px;
+.cookiebar-widget .cookiebar-wrapper {
+    width: calc(100% - 40px);
+    padding: 10px 0;
+    margin: 0 auto;
 }
 
-.cookiebar-widget .cookiebar-content {
-    flex: 1 0 300px;
-    padding: 15px;
+@media (min-width: 768px) {
+    .cookiebar-widget .cookiebar-wrapper {
+        width: calc(100% - 200px);
+        padding: 20px 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .cookiebar-widget .cookiebar-wrapper {
+        width: calc(100% - 280px);
+    }
+}
+
+.cookiebar-widget .btn-link {
+    font-size: inherit;
+}
+
+.cookiebar-widget .btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 10px 0 0;
+}
+
+.cookiebar-widget .btn-wrapper .btn + .btn {
+    margin-left: 10px;
 }
 
 .cookiebar-overlay {
