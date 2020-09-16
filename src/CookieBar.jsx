@@ -54,7 +54,7 @@ export default class CookieBar extends Component {
                 //Classes
                 style={Object.assign(
                     this.props.style,
-                    this.state.message === "" ? { display: "none" } : { display: "initial" }
+                    this.state.message === "" ? { display: "none" } : { display: "" }
                 )}
                 containerClasses={"cookiebar-widget " + this.props.class}
                 buttonClasses="btn btn-primary btn-accept"
