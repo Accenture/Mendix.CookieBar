@@ -11,6 +11,14 @@ export default class CookieBar extends Component {
         };
     }
 
+    handleonClick() {
+        try {
+            this.props.onChange.execute();
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
     componentDidMount() {
         const interval = setInterval(() => {
             var wrapper = document.getElementById("cookiebar-wrapper");
@@ -23,7 +31,7 @@ export default class CookieBar extends Component {
                     wrapper.appendChild(cookiebarContent);
                     wrapper.appendChild(btnWrapper);
                 } catch (error) {
-                    console.error(error);
+                    console.debug("Cookie bar was not rendered.");
                 }
                 this.setState({ message: this.props.caption.value });
                 clearInterval(interval);
